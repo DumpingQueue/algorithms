@@ -25,10 +25,11 @@ int interpolation_search(const int array[], int v, int max)
         {
             return pos;
         }
-        if(current < v)
+        else if(current < v)
         {
             left = pos + 1;
-        } else
+        }
+        else
         {
             right = pos - 1;
         }
