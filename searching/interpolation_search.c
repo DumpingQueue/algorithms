@@ -18,7 +18,8 @@ int interpolation_search(const int array[], int v, int max)
         double x = left + ((double)(v - array[left]) / (double)(array[right] - array[left])) * (right - left);
 
         //checks if number has to be floored or ceiled
-        int pos = (x - 0.5) > floor(x) ? (int)ceil(x) : (int)floor(x);
+        double temp = floor(x);
+        int pos = (x - 0.5) > temp ? (int)ceil(x) : (int)temp;
         int current = array[pos];
 
         if(current == v)
